@@ -1,11 +1,9 @@
-import React, { FC, useContext, useEffect, useState, useCallback } from 'react';
-// import {Store} from "../reducers/store"
-import { Message, Button } from 'semantic-ui-react';
+import React, { FC, useEffect, useCallback } from 'react';
+import { Message } from 'semantic-ui-react';
 import { useSelector, useDispatch } from 'react-redux';
 import { contractSelector } from '../../reducer/reducer';
 
 const GetVotingEndSign: FC = () => {
-  // const { state,dispatch } = useContext(Store)
   const contract = useSelector(contractSelector);
   const dispatch = useDispatch();
 

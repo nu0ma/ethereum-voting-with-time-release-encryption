@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { Contract } from 'web3-eth-contract';
 
 // type State = {
 //   currentContract: any;
@@ -9,7 +10,7 @@ import { combineReducers } from 'redux';
 export type Action =
   | {
       type: 'SET_CONTRACT';
-      currentContract: any;
+      currentContract: Contract;
       isLoading: boolean;
       isEnd: boolean;
     }
@@ -46,10 +47,10 @@ export const contract_reducer = (
   }
 };
 
-// TODO: rootReducerの型を書く必要がある
-
-export const contractSelector = (state: any) => state.contract;
+export const contractSelector = (state: RootState) => state.contract;
 
 export const rootReducer = combineReducers({
   contract: contract_reducer
 });
+
+export type RootState = ReturnType<typeof rootReducer>;

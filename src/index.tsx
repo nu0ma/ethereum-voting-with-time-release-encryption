@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { rootReducer } from './reducer/reducer';
+import { rootReducer, RootState } from './reducer/reducer';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -34,9 +34,12 @@ import CheckPage from './pages/CheckPage';
 import Spinner from './components/Common/Spinner';
 
 import Web3 from 'web3';
+/* tslint:disable */
+// import { Contract } from 'web3-eth-contract';
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // import { Contract } from 'web3/types';
-// import { Contract } from 'web3-eth-contract';
+import { Contract } from 'web3-eth-contract';
 
 import { AbiItem } from 'web3-utils';
 // import { Contract } from 'web3';
@@ -48,9 +51,11 @@ const web3 = new Web3('ws://localhost:8545');
 
 const store = createStore(rootReducer, composeWithDevTools());
 
-const contractSelector = (state: any) => state.contract;
+const contractSelector = (state: RootState) => state.contract;
 
 console.log(store.getState());
+
+// var fs = require('fs');
 
 const Root = () => {
   const contractInstance = useSelector(contractSelector);
@@ -58,9 +63,9 @@ const Root = () => {
   let history = useHistory();
 
   const setContract = useCallback(async () => {
-    const instance = new web3.eth.Contract(
+    const instance: Contract = new web3.eth.Contract(
       Voting.abi as AbiItem[],
-      //  if you use ganache
+      //  if you use ganache, networkId = 5777
       Voting.networks[5777].address as string,
       {
         from: web3.eth.defaultAccount as string
@@ -69,6 +74,7 @@ const Root = () => {
     console.log('instance', instance);
     dispatch({ type: 'SET_CONTRACT', currentContract: instance });
     // setC(instance);
+    // fs.writeFile('hge.json', JSON.stringify(instance, null, ' '));
   }, [dispatch]);
 
   useMemo(() => {

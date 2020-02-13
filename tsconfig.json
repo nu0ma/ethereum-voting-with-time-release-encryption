@@ -21,6 +21,6 @@
     "strict": true
   },
   "include": [
-    "src"
+    "src", "web3"
   ]
 }

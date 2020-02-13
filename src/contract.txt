@@ -1,0 +1,1493 @@
+ contract: {
+    currentContract: {
+      currentProvider: {
+        responseCallbacks: {},
+        notificationCallbacks: [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        connection: {},
+        connected: true
+      },
+      _requestManager: {
+        provider: {
+          responseCallbacks: {},
+          notificationCallbacks: [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          connection: {},
+          connected: true
+        },
+        providers: {},
+        subscriptions: {}
+      },
+      givenProvider: {
+        selectedAddress: '0x9322ea9eed3c95152d3f134bdf68c50692f09b61',
+        networkVersion: '5777',
+        chainId: '0xNaN',
+        _events: {},
+        _eventsCount: 1,
+        _maxListeners: 100,
+        mux: {
+          _readableState: {
+            objectMode: true,
+            highWaterMark: 16,
+            buffer: {
+              head: null,
+              tail: null,
+              length: 0
+            },
+            length: 0,
+            pipes: {
+              _readableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                buffer: {
+                  head: null,
+                  tail: null,
+                  length: 0
+                },
+                length: 0,
+                pipes: '[CIRCULAR]',
+                pipesCount: 1,
+                flowing: true,
+                ended: false,
+                endEmitted: false,
+                reading: true,
+                sync: false,
+                needReadable: true,
+                emittedReadable: false,
+                readableListening: false,
+                resumeScheduled: false,
+                destroyed: false,
+                defaultEncoding: 'utf8',
+                awaitDrain: 0,
+                readingMore: false,
+                decoder: null,
+                encoding: null
+              },
+              readable: true,
+              _events: {
+                end: [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                close: [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                finish: [
+                  null,
+                  null,
+                  null
+                ],
+                error: [
+                  null,
+                  null,
+                  null
+                ]
+              },
+              _eventsCount: 7,
+              _writableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                finalCalled: false,
+                needDrain: false,
+                ending: false,
+                ended: false,
+                finished: false,
+                destroyed: false,
+                decodeStrings: true,
+                defaultEncoding: 'utf8',
+                length: 0,
+                writing: false,
+                corked: 0,
+                sync: true,
+                bufferProcessing: false,
+                writecb: null,
+                writelen: 0,
+                bufferedRequest: null,
+                lastBufferedRequest: null,
+                pendingcb: 0,
+                prefinished: false,
+                errorEmitted: false,
+                bufferedRequestCount: 0,
+                corkedRequestsFree: {
+                  next: null,
+                  entry: null
+                }
+              },
+              writable: true,
+              allowHalfOpen: true,
+              _name: 'inpage',
+              _target: 'contentscript',
+              _targetWindow: '[WINDOW]',
+              _origin: 'http://localhost:3000',
+              _init: true,
+              _haveSyn: true
+            },
+            pipesCount: 1,
+            flowing: true,
+            ended: false,
+            endEmitted: false,
+            reading: true,
+            sync: false,
+            needReadable: true,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            destroyed: false,
+            defaultEncoding: 'utf8',
+            awaitDrain: 0,
+            readingMore: false,
+            decoder: null,
+            encoding: null
+          },
+          readable: true,
+          _events: {
+            end: [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            close: [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            finish: [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            error: [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          _eventsCount: 7,
+          _writableState: {
+            objectMode: true,
+            highWaterMark: 16,
+            finalCalled: false,
+            needDrain: false,
+            ending: false,
+            ended: false,
+            finished: false,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            writecb: null,
+            writelen: 0,
+            bufferedRequest: null,
+            lastBufferedRequest: null,
+            pendingcb: 0,
+            prefinished: false,
+            errorEmitted: false,
+            bufferedRequestCount: 0,
+            corkedRequestsFree: {
+              next: null,
+              entry: null
+            }
+          },
+          writable: true,
+          allowHalfOpen: true,
+          _substreams: {
+            publicConfig: {
+              _readableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                buffer: {
+                  head: null,
+                  tail: null,
+                  length: 0
+                },
+                length: 0,
+                pipes: {
+                  _readableState: {
+                    objectMode: true,
+                    highWaterMark: 16,
+                    buffer: {
+                      head: null,
+                      tail: null,
+                      length: 0
+                    },
+                    length: 0,
+                    pipes: null,
+                    pipesCount: 0,
+                    flowing: true,
+                    ended: false,
+                    endEmitted: false,
+                    reading: true,
+                    sync: false,
+                    needReadable: true,
+                    emittedReadable: false,
+                    readableListening: false,
+                    resumeScheduled: false,
+                    destroyed: false,
+                    defaultEncoding: 'utf8',
+                    awaitDrain: 0,
+                    readingMore: false,
+                    decoder: null,
+                    encoding: null
+                  },
+                  readable: true,
+                  _events: {
+                    end: [
+                      null,
+                      null
+                    ],
+                    close: [
+                      null,
+                      null,
+                      null
+                    ],
+                    finish: [
+                      null,
+                      null
+                    ],
+                    error: [
+                      null,
+                      null
+                    ]
+                  },
+                  _eventsCount: 6,
+                  _writableState: {
+                    objectMode: true,
+                    highWaterMark: 16,
+                    finalCalled: false,
+                    needDrain: false,
+                    ending: false,
+                    ended: false,
+                    finished: false,
+                    destroyed: false,
+                    decodeStrings: true,
+                    defaultEncoding: 'utf8',
+                    length: 0,
+                    writing: false,
+                    corked: 0,
+                    sync: false,
+                    bufferProcessing: false,
+                    writecb: null,
+                    writelen: 0,
+                    bufferedRequest: null,
+                    lastBufferedRequest: null,
+                    pendingcb: 0,
+                    prefinished: false,
+                    errorEmitted: false,
+                    bufferedRequestCount: 0,
+                    corkedRequestsFree: {
+                      next: null,
+                      entry: null
+                    }
+                  },
+                  writable: true,
+                  allowHalfOpen: true,
+                  obsStore: {
+                    _events: {
+                      update: [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null
+                      ]
+                    },
+                    _eventsCount: 1,
+                    _state: {
+                      isUnlocked: true,
+                      isEnabled: true,
+                      selectedAddress: '0x9322ea9eed3c95152d3f134bdf68c50692f09b61',
+                      networkVersion: '5777',
+                      onboardingcomplete: true,
+                      chainId: '0xNaN'
+                    }
+                  }
+                },
+                pipesCount: 1,
+                flowing: true,
+                ended: false,
+                endEmitted: false,
+                reading: true,
+                sync: false,
+                needReadable: true,
+                emittedReadable: false,
+                readableListening: false,
+                resumeScheduled: false,
+                destroyed: false,
+                defaultEncoding: 'utf8',
+                awaitDrain: 0,
+                readingMore: false,
+                decoder: null,
+                encoding: null
+              },
+              readable: true,
+              _events: {
+                end: [
+                  null,
+                  null,
+                  null
+                ],
+                close: [
+                  null,
+                  null
+                ]
+              },
+              _eventsCount: 5,
+              _writableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                finalCalled: false,
+                needDrain: false,
+                ending: false,
+                ended: false,
+                finished: false,
+                destroyed: false,
+                decodeStrings: true,
+                defaultEncoding: 'utf8',
+                length: 0,
+                writing: false,
+                corked: 0,
+                sync: true,
+                bufferProcessing: false,
+                writecb: null,
+                writelen: 0,
+                bufferedRequest: null,
+                lastBufferedRequest: null,
+                pendingcb: 0,
+                prefinished: false,
+                errorEmitted: false,
+                bufferedRequestCount: 0,
+                corkedRequestsFree: {
+                  next: null,
+                  entry: null
+                }
+              },
+              writable: true,
+              allowHalfOpen: true,
+              _parent: '[CIRCULAR]',
+              _name: 'publicConfig'
+            },
+            phishing: {},
+            provider: {
+              _readableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                buffer: {
+                  head: null,
+                  tail: null,
+                  length: 0
+                },
+                length: 0,
+                pipes: {
+                  _readableState: {
+                    objectMode: true,
+                    highWaterMark: 16,
+                    buffer: {
+                      head: null,
+                      tail: null,
+                      length: 0
+                    },
+                    length: 0,
+                    pipes: '[CIRCULAR]',
+                    pipesCount: 1,
+                    flowing: true,
+                    ended: false,
+                    endEmitted: false,
+                    reading: true,
+                    sync: false,
+                    needReadable: true,
+                    emittedReadable: false,
+                    readableListening: false,
+                    resumeScheduled: false,
+                    destroyed: false,
+                    defaultEncoding: 'utf8',
+                    awaitDrain: 0,
+                    readingMore: false,
+                    decoder: null,
+                    encoding: null
+                  },
+                  readable: true,
+                  _events: {
+                    end: [
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    close: [
+                      null,
+                      null,
+                      null,
+                      null,
+                      null
+                    ],
+                    finish: [
+                      null,
+                      null,
+                      null
+                    ],
+                    error: [
+                      null,
+                      null,
+                      null
+                    ]
+                  },
+                  _eventsCount: 7,
+                  _writableState: {
+                    objectMode: true,
+                    highWaterMark: 16,
+                    finalCalled: false,
+                    needDrain: false,
+                    ending: false,
+                    ended: false,
+                    finished: false,
+                    destroyed: false,
+                    decodeStrings: true,
+                    defaultEncoding: 'utf8',
+                    length: 0,
+                    writing: false,
+                    corked: 0,
+                    sync: true,
+                    bufferProcessing: false,
+                    writecb: null,
+                    writelen: 0,
+                    bufferedRequest: null,
+                    lastBufferedRequest: null,
+                    pendingcb: 0,
+                    prefinished: false,
+                    errorEmitted: false,
+                    bufferedRequestCount: 0,
+                    corkedRequestsFree: {
+                      next: null,
+                      entry: null
+                    }
+                  },
+                  writable: true,
+                  allowHalfOpen: true
+                },
+                pipesCount: 1,
+                flowing: true,
+                ended: false,
+                endEmitted: false,
+                reading: true,
+                sync: false,
+                needReadable: true,
+                emittedReadable: false,
+                readableListening: false,
+                resumeScheduled: false,
+                destroyed: false,
+                defaultEncoding: 'utf8',
+                awaitDrain: 0,
+                readingMore: false,
+                decoder: null,
+                encoding: null
+              },
+              readable: true,
+              _events: {
+                end: [
+                  null,
+                  null,
+                  null
+                ],
+                close: [
+                  null,
+                  null,
+                  null
+                ],
+                finish: [
+                  null,
+                  null
+                ],
+                error: [
+                  null,
+                  null
+                ]
+              },
+              _eventsCount: 7,
+              _writableState: {
+                objectMode: true,
+                highWaterMark: 16,
+                finalCalled: false,
+                needDrain: false,
+                ending: false,
+                ended: false,
+                finished: false,
+                destroyed: false,
+                decodeStrings: true,
+                defaultEncoding: 'utf8',
+                length: 0,
+                writing: false,
+                corked: 0,
+                sync: true,
+                bufferProcessing: false,
+                writecb: null,
+                writelen: 0,
+                bufferedRequest: null,
+                lastBufferedRequest: null,
+                pendingcb: 0,
+                prefinished: false,
+                errorEmitted: false,
+                bufferedRequestCount: 0,
+                corkedRequestsFree: {
+                  next: null,
+                  entry: null
+                }
+              },
+              writable: true,
+              allowHalfOpen: true,
+              _parent: '[CIRCULAR]',
+              _name: 'provider'
+            }
+          }
+        },
+        publicConfigStore: {
+          _events: {
+            update: [
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          _eventsCount: 1,
+          _state: {
+            isUnlocked: true,
+            isEnabled: true,
+            selectedAddress: '0x9322ea9eed3c95152d3f134bdf68c50692f09b61',
+            networkVersion: '5777',
+            onboardingcomplete: true,
+            chainId: '0xNaN'
+          }
+        },
+        rpcEngine: {
+          _events: {},
+          _eventsCount: 0,
+          _middleware: [
+            null,
+            null,
+            null
+          ]
+        },
+        autoRefreshOnNetworkChange: true,
+        _metamask: {}
+      },
+      providers: {},
+      _provider: {
+        responseCallbacks: {},
+        notificationCallbacks: [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        connection: {},
+        connected: true
+      },
+      options: {
+        address: '0xb527D4d745Dc1F129874e712Aa09df6573758c8B',
+        jsonInterface: [
+          {
+            constant: true,
+            inputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            name: 'ballots',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x5c632b38'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'end',
+            outputs: [
+              {
+                internalType: 'bool',
+                name: '',
+                type: 'bool'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0xefbe1c1c'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'inspectorAddress',
+            outputs: [
+              {
+                internalType: 'address',
+                name: '',
+                type: 'address'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x696f8c57'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'ownerAddress',
+            outputs: [
+              {
+                internalType: 'address',
+                name: '',
+                type: 'address'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x8f84aa09'
+          },
+          {
+            constant: true,
+            inputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            name: 'testArray',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x463f5c30'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'testWord',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x408b81ca'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'value',
+            outputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x3fa4f245'
+          },
+          {
+            constant: true,
+            inputs: [
+              {
+                internalType: 'address',
+                name: '',
+                type: 'address'
+              }
+            ],
+            name: 'voteCount',
+            outputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x5e3cd7bc'
+          },
+          {
+            constant: true,
+            inputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            name: 'voterAddressArray',
+            outputs: [
+              {
+                internalType: 'address',
+                name: '',
+                type: 'address'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x71b7ddb8'
+          },
+          {
+            constant: true,
+            inputs: [
+              {
+                internalType: 'address',
+                name: '',
+                type: 'address'
+              }
+            ],
+            name: 'votes',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0xd8bff5a5'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'address',
+                name: '_voterAddress',
+                type: 'address'
+              }
+            ],
+            name: 'setVoterAddress',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0xd7b9377a'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'address',
+                name: '_inspectorAddress',
+                type: 'address'
+              }
+            ],
+            name: 'setInspectorAddress',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x4ba5059c'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'string',
+                name: '_vote',
+                type: 'string'
+              },
+              {
+                internalType: 'string',
+                name: '_rP',
+                type: 'string'
+              }
+            ],
+            name: 'setVote',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0xa59fde3e'
+          },
+          {
+            constant: false,
+            inputs: [],
+            name: 'endVoting',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0xc3403ddf'
+          },
+          {
+            constant: false,
+            inputs: [],
+            name: 'getEndSign',
+            outputs: [
+              {
+                internalType: 'bool',
+                name: '',
+                type: 'bool'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x05ad9e29'
+          },
+          {
+            constant: false,
+            inputs: [],
+            name: 'viewResult',
+            outputs: [
+              {
+                internalType: 'string[]',
+                name: '',
+                type: 'string[]'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x3cff0380'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'uint256',
+                name: '_value',
+                type: 'uint256'
+              }
+            ],
+            name: 'setValue',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x55241077'
+          },
+          {
+            constant: false,
+            inputs: [],
+            name: 'getValue',
+            outputs: [
+              {
+                internalType: 'uint256',
+                name: '',
+                type: 'uint256'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x20965255'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'string',
+                name: '_word',
+                type: 'string'
+              }
+            ],
+            name: 'testSetWord',
+            outputs: [],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0xcc0d781c'
+          },
+          {
+            constant: true,
+            inputs: [],
+            name: 'testGetArray',
+            outputs: [
+              {
+                internalType: 'string[]',
+                name: '',
+                type: 'string[]'
+              }
+            ],
+            payable: false,
+            stateMutability: 'view',
+            type: 'function',
+            signature: '0x53728cac'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'address',
+                name: 'x',
+                type: 'address'
+              }
+            ],
+            name: 'toAsciiString',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x2c6e7598'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'bytes1',
+                name: 'b',
+                type: 'bytes1'
+              }
+            ],
+            name: 'char',
+            outputs: [
+              {
+                internalType: 'bytes1',
+                name: 'c',
+                type: 'bytes1'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x69f9ad2f'
+          },
+          {
+            constant: false,
+            inputs: [
+              {
+                internalType: 'string',
+                name: '_a',
+                type: 'string'
+              },
+              {
+                internalType: 'string',
+                name: '_b',
+                type: 'string'
+              }
+            ],
+            name: 'strConnect',
+            outputs: [
+              {
+                internalType: 'string',
+                name: '',
+                type: 'string'
+              }
+            ],
+            payable: false,
+            stateMutability: 'nonpayable',
+            type: 'function',
+            signature: '0x30f8ca83'
+          }
+        ]
+      },
+      handleRevert: false,
+      transactionPollingTimeout: 750,
+      transactionConfirmationBlocks: 24,
+      transactionBlockTimeout: 50,
+      defaultAccount: null,
+      defaultBlock: 'latest',
+      methods: {},
+      events: {},
+      _address: '0xb527D4d745Dc1F129874e712Aa09df6573758c8B',
+      _jsonInterface: [
+        {
+          constant: true,
+          inputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          name: 'ballots',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x5c632b38'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'end',
+          outputs: [
+            {
+              internalType: 'bool',
+              name: '',
+              type: 'bool'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0xefbe1c1c'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'inspectorAddress',
+          outputs: [
+            {
+              internalType: 'address',
+              name: '',
+              type: 'address'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x696f8c57'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'ownerAddress',
+          outputs: [
+            {
+              internalType: 'address',
+              name: '',
+              type: 'address'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x8f84aa09'
+        },
+        {
+          constant: true,
+          inputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          name: 'testArray',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x463f5c30'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'testWord',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x408b81ca'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'value',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x3fa4f245'
+        },
+        {
+          constant: true,
+          inputs: [
+            {
+              internalType: 'address',
+              name: '',
+              type: 'address'
+            }
+          ],
+          name: 'voteCount',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x5e3cd7bc'
+        },
+        {
+          constant: true,
+          inputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          name: 'voterAddressArray',
+          outputs: [
+            {
+              internalType: 'address',
+              name: '',
+              type: 'address'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x71b7ddb8'
+        },
+        {
+          constant: true,
+          inputs: [
+            {
+              internalType: 'address',
+              name: '',
+              type: 'address'
+            }
+          ],
+          name: 'votes',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0xd8bff5a5'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'address',
+              name: '_voterAddress',
+              type: 'address'
+            }
+          ],
+          name: 'setVoterAddress',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0xd7b9377a'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'address',
+              name: '_inspectorAddress',
+              type: 'address'
+            }
+          ],
+          name: 'setInspectorAddress',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x4ba5059c'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'string',
+              name: '_vote',
+              type: 'string'
+            },
+            {
+              internalType: 'string',
+              name: '_rP',
+              type: 'string'
+            }
+          ],
+          name: 'setVote',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0xa59fde3e'
+        },
+        {
+          constant: false,
+          inputs: [],
+          name: 'endVoting',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0xc3403ddf'
+        },
+        {
+          constant: false,
+          inputs: [],
+          name: 'getEndSign',
+          outputs: [
+            {
+              internalType: 'bool',
+              name: '',
+              type: 'bool'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x05ad9e29'
+        },
+        {
+          constant: false,
+          inputs: [],
+          name: 'viewResult',
+          outputs: [
+            {
+              internalType: 'string[]',
+              name: '',
+              type: 'string[]'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x3cff0380'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'uint256',
+              name: '_value',
+              type: 'uint256'
+            }
+          ],
+          name: 'setValue',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x55241077'
+        },
+        {
+          constant: false,
+          inputs: [],
+          name: 'getValue',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x20965255'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'string',
+              name: '_word',
+              type: 'string'
+            }
+          ],
+          name: 'testSetWord',
+          outputs: [],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0xcc0d781c'
+        },
+        {
+          constant: true,
+          inputs: [],
+          name: 'testGetArray',
+          outputs: [
+            {
+              internalType: 'string[]',
+              name: '',
+              type: 'string[]'
+            }
+          ],
+          payable: false,
+          stateMutability: 'view',
+          type: 'function',
+          signature: '0x53728cac'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'address',
+              name: 'x',
+              type: 'address'
+            }
+          ],
+          name: 'toAsciiString',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x2c6e7598'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'bytes1',
+              name: 'b',
+              type: 'bytes1'
+            }
+          ],
+          name: 'char',
+          outputs: [
+            {
+              internalType: 'bytes1',
+              name: 'c',
+              type: 'bytes1'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x69f9ad2f'
+        },
+        {
+          constant: false,
+          inputs: [
+            {
+              internalType: 'string',
+              name: '_a',
+              type: 'string'
+            },
+            {
+              internalType: 'string',
+              name: '_b',
+              type: 'string'
+            }
+          ],
+          name: 'strConnect',
+          outputs: [
+            {
+              internalType: 'string',
+              name: '',
+              type: 'string'
+            }
+          ],
+          payable: false,
+          stateMutability: 'nonpayable',
+          type: 'function',
+          signature: '0x30f8ca83'
+        }
+      ]
+    },
+ 
