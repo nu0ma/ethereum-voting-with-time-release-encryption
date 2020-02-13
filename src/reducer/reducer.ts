@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-// import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 // type State = {
 //   currentContract: any;
@@ -25,27 +24,6 @@ const initialContractState = {
   isEnd: false
 };
 
-// const contractModules = createSlice({
-//   name: 'contract',
-//   initialState: initialContractState,
-//   reducers: {
-//     setContract: (state: State, action: PayloadAction<any>) => {
-//       return {
-//         ...state,
-//         currentContract: action.payload,
-//         isLoading: false,
-//         isEnd: false
-//       };
-//     },
-//     endVoting: (state: State) => {
-//       return {
-//         ...state,
-//         isEnd: true
-//       };
-//     }
-//   }
-// });
-
 export const contract_reducer = (
   state: State = initialContractState,
   action: Action
@@ -68,21 +46,10 @@ export const contract_reducer = (
   }
 };
 
+// TODO: rootReducerの型を書く必要がある
+
+export const contractSelector = (state: any) => state.contract;
+
 export const rootReducer = combineReducers({
   contract: contract_reducer
 });
-
-// export default rootReducer;
-
-// export default store;
-
-// const Store = React.createContext(initialState);
-
-// const Provider = ({ children }) => {
-//   const [state, dispatch] = useReducer(reducer, initialState);
-//   return (
-//     <Store.Provider value={{ state, dispatch }}>{children}</Store.Provider>
-//   );
-// };
-
-// export { Store, Provider };

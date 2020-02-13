@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const AddressViewer = () => {
-  return <div></div>;
+type AddressViewerProps = {
+  address: string;
+  role: string;
+};
+
+const AddressViewer: FC<AddressViewerProps> = ({ address, role }) => {
+  return (
+    <div>
+      {role} Address : {address}
+    </div>
+  );
 };
 
 export default AddressViewer;

@@ -6,10 +6,12 @@ import React, {
   useMemo
 } from 'react';
 import ReactDOM from 'react-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-import * as serviceWorker from './serviceWorker';
-import './index.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { rootReducer } from './reducer/reducer';
+import { createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import 'semantic-ui-css/semantic.min.css';
 import {
@@ -30,80 +32,61 @@ import VoterPage from './pages/VoterPage';
 import ResultPage from './pages/ResultPage';
 import CheckPage from './pages/CheckPage';
 import Spinner from './components/Common/Spinner';
-// import web3 from './utils/web3/web3';
 
 import Web3 from 'web3';
-
-// import { rootReducer } from './reducer/reducer';
-// import { setupStore } from './reducer/store';
-
-// import contractModules from './reducer/reducer';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// import { Contract } from 'web3/types';
+// import { Contract } from 'web3-eth-contract';
 
 import { AbiItem } from 'web3-utils';
+// import { Contract } from 'web3';
 
-import { rootReducer } from './reducer/reducer';
-
-import { createStore } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-
-// const store = setupStore();
-
-// declare const Voting: any;
-
-// const web3: any = web3;
-
-// const web3 = require('./utils/web3/web3');
+import * as serviceWorker from './serviceWorker';
+import './index.css';
 
 const web3 = new Web3('ws://localhost:8545');
+
 const store = createStore(rootReducer, composeWithDevTools());
 
-// const abi = 'test';
-// const abi: AbiItem[] = Voting.abi;
+const contractSelector = (state: any) => state.contract;
 
-const contractSelector = (state: State) => state.currentContract;
+console.log(store.getState());
 
 const Root = () => {
-  // const [c, setC] = useState<any>(null);
-  const contract = useSelector(contractSelector);
+  const contractInstance = useSelector(contractSelector);
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const setContract = useCallback(async () => {
     const instance = new web3.eth.Contract(
       Voting.abi as AbiItem[],
-      web3.eth.defaultAccount as string,
+      //  if you use ganache
+      Voting.networks[5777].address as string,
       {
         from: web3.eth.defaultAccount as string
       }
     );
     console.log('instance', instance);
     dispatch({ type: 'SET_CONTRACT', currentContract: instance });
-    console.log(contract);
     // setC(instance);
-  }, [contract, dispatch]);
+  }, [dispatch]);
 
-  // useEffect(() => {
-  //   setContract();
-  //   // props.history.push('/home');
-  //   console.log(web3);
-  //   // console.log(c);
-  //   // console.log(contract);
-  //   // console.log(instance);
-  // }, [setContract]);
-  useMemo(async () => {
+  useMemo(() => {
     setContract();
-  }, [setContract]);
+    history.push('/home');
+  }, [history, setContract]);
 
-  return contract ? (
+  return contractInstance.isLoading ? (
     <Spinner />
   ) : (
     <Switch>
       <Route path="/home" component={Home} />{' '}
       <Route path="/organizer" component={OrganizerPage} />{' '}
-      <Route exact path="/" component={VoterPage} />{' '}
+      <Route path="/voter" component={VoterPage} />{' '}
       <Route path="/result" component={ResultPage} />{' '}
       <Route path="/decrypt" component={DecryptPage} />{' '}
       <Route path="/check" component={CheckPage} />{' '}
-      {/* <Redirect path="/home"/> */}{' '}
+      {/* <Redirect path="/home"/>{' '} */}
     </Switch>
   );
 };

@@ -8,7 +8,7 @@ const Home = () => {
     <Segment.Group className="container">
       <Header>Home</Header>
       <Segment className="item">
-        <Link to={'/'}>Go to Vote Page</Link>
+        <Link to={'/voter'}>Go to Vote Page</Link>
       </Segment>
       <Segment className="item">
         <Link to={'/organizer'}>Go to Organizer Page</Link>
