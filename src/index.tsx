@@ -58,7 +58,7 @@ console.log(store.getState());
 // var fs = require('fs');
 
 const Root = () => {
-  const contractInstance = useSelector(contractSelector);
+  const contractState = useSelector(contractSelector);
   const dispatch = useDispatch();
   let history = useHistory();
 
@@ -82,7 +82,7 @@ const Root = () => {
     history.push('/home');
   }, [history, setContract]);
 
-  return contractInstance.isLoading ? (
+  return contractState.isLoading ? (
     <Spinner />
   ) : (
     <Switch>
