@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useContext,
-  useCallback,
-  useState,
-  useMemo
-} from 'react';
+import React, { useCallback, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom';
 
@@ -18,7 +12,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
   withRouter
 } from 'react-router-dom';
 
@@ -34,18 +27,10 @@ import CheckPage from './pages/CheckPage';
 import Spinner from './components/Common/Spinner';
 
 import Web3 from 'web3';
-/* tslint:disable */
-// import { Contract } from 'web3-eth-contract';
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// import { Contract } from 'web3/types';
 import { Contract } from 'web3-eth-contract';
-
 import { AbiItem } from 'web3-utils';
-// import { Contract } from 'web3';
 
 import * as serviceWorker from './serviceWorker';
-import './index.css';
 
 const web3 = new Web3('ws://localhost:8545');
 
@@ -54,8 +39,6 @@ const store = createStore(rootReducer, composeWithDevTools());
 const contractSelector = (state: RootState) => state.contract;
 
 console.log(store.getState());
-
-// var fs = require('fs');
 
 const Root = () => {
   const contractState = useSelector(contractSelector);
@@ -73,8 +56,6 @@ const Root = () => {
     );
     console.log('instance', instance);
     dispatch({ type: 'SET_CONTRACT', currentContract: instance });
-    // setC(instance);
-    // fs.writeFile('hge.json', JSON.stringify(instance, null, ' '));
   }, [dispatch]);
 
   useMemo(() => {
@@ -86,13 +67,12 @@ const Root = () => {
     <Spinner />
   ) : (
     <Switch>
-      <Route path="/home" component={Home} />{' '}
-      <Route path="/organizer" component={OrganizerPage} />{' '}
-      <Route path="/voter" component={VoterPage} />{' '}
-      <Route path="/result" component={ResultPage} />{' '}
-      <Route path="/decrypt" component={DecryptPage} />{' '}
-      <Route path="/check" component={CheckPage} />{' '}
-      {/* <Redirect path="/home"/>{' '} */}
+      <Route path="/home" component={Home} />
+      <Route path="/organizer" component={OrganizerPage} />
+      <Route path="/voter" component={VoterPage} />
+      <Route path="/result" component={ResultPage} />
+      <Route path="/decrypt" component={DecryptPage} />
+      <Route path="/check" component={CheckPage} />
     </Switch>
   );
 };

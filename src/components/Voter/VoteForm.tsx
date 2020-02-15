@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC } from 'react';
+import React, { useState, FC } from 'react';
 import { Form, Button, Message, Segment } from 'semantic-ui-react';
 import axios from 'axios';
 import ipfs from '../../utils/ipfs/ipfs';
@@ -47,6 +47,12 @@ const VoteForm: FC<VoteFormProps> = ({ setVote, error }) => {
     } catch (err) {
       console.log(err);
     }
+    //   try {
+    //     await setVote('test', 'tst');
+    //     setEnd(true);
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

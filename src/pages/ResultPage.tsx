@@ -1,12 +1,17 @@
 import React from 'react';
 import Result from '../components/Result';
+import styled from '@emotion/styled';
 
 const ResultPage = () => {
   return (
-    <div>
+    <Container>
       <Result />
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  margin: 50;
+`;
 
 export default ResultPage;

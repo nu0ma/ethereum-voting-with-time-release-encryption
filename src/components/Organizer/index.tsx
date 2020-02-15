@@ -22,7 +22,6 @@ const Organizer = () => {
   }, [account]);
 
   useEffect(() => {
-    // console.log(contractInstance);
     setInitialAccount();
   }, [setInitialAccount]);
 
@@ -31,7 +30,10 @@ const Organizer = () => {
     try {
       await contractState.currentContract.methods
         .setVoterAddress(voterAddress)
-        .send({ from: account });
+        .send({
+          from: account,
+          gas: 300000 // change gas
+        });
     } catch (err) {
       setErrors(errors.concat(err));
       console.log(err);
@@ -53,7 +55,6 @@ const Organizer = () => {
 
   const endVoting = async () => {
     try {
-      //TODO: コントラクトのendをtrueにする処理を書く
       await contractState.currentContract.methods
         .endVoting()
         .send({ from: account });
@@ -69,51 +70,38 @@ const Organizer = () => {
     }
   };
 
-  // const displayErrors = (_errors) => _errors.map((text,i) => <p key={i}>{text}</p>)
-
   return (
-    <Segment.Group className="container">
+    <div>
       <Header>
         Organizer Page
         <GetVotingEndSign />
       </Header>
-
-      <Message className="item">
-        <Message.Header>Are you Organizer ?</Message.Header>
-        <p>
-          If you aren't Organizer, Go to <Link to={'/'}>Voter Page</Link>.
-          <br />
-          You cannot do anything in this page because your address is not
-          Organizer Address.
-        </p>
-      </Message>
-
-      <Segment className="item">
-        <AddressForm role="Voter" setAddress={setVoterAddress} />
-      </Segment>
-
-      {/* <Segment>
-        <AddressForm role="Inspector" setAddress={setInspectorAddress}/>
-      </Segment> */}
-
-      <Segment className="item">
-        <Message negative className="end">
-          <p className="endMessage">
-            If you want to end Voting click this button.
+      <Segment.Group>
+        <Message>
+          <Message.Header>Are you Organizer ?</Message.Header>
+          <p>
+            If you aren't Organizer, Go to <Link to={'/voter'}>Voter Page</Link>
+            .
+            <br />
+            You cannot do anything in this page because your address is not
+            Organizer Address.
           </p>
-          <Button color="red" onClick={endVoting}>
-            END VOTE
-          </Button>
         </Message>
-      </Segment>
-      {/* <Message>
-        {errors.length > 0 && (
-          <Message>
-            {displayErrors(errors)}
+
+        <Segment>
+          <AddressForm role="Voter" setAddress={setVoterAddress} />
+        </Segment>
+
+        <Segment>
+          <Message negative>
+            <p>If you want to end Voting click this button.</p>
+            <Button color="red" onClick={endVoting}>
+              END VOTE
+            </Button>
           </Message>
-        )}
-      </Message> */}
-    </Segment.Group>
+        </Segment>
+      </Segment.Group>
+    </div>
   );
 };
 

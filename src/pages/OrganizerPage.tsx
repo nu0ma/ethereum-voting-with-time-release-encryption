@@ -1,12 +1,17 @@
 import React from 'react';
 import Organizer from '../components/Organizer';
+import styled from '@emotion/styled';
 
 const OrganizerPage = () => {
   return (
-    <div>
+    <Container>
       <Organizer />
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  margin: 50;
+`;
 
 export default OrganizerPage;

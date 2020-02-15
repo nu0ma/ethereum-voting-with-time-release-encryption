@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Button, Segment, Message } from 'semantic-ui-react';
+import { Button, Segment, Message, Header } from 'semantic-ui-react';
 
 const Check = () => {
   const [timeKey, setTimeKey] = useState('');
@@ -15,13 +15,10 @@ const Check = () => {
     const res = await axios.get(
       `http://localhost:5000/timeserver/${process.env.REACT_APP_DECRYPTION_TIME}`
     );
-    // console.log(res.data.sHT0);
     return res;
   };
 
   const handleSubmit = async () => {
-    // const timeKeyResponce = await getTimekey();
-    // setTimeKey(timeKeyResponce.data.sHT0);
     const res = await axios.post('http://localhost:5000/check', {
       Q: timeKey,
       T: process.env.REACT_APP_DECRYPTION_TIME
@@ -38,7 +35,8 @@ const Check = () => {
   };
 
   return (
-    <div className="container">
+    <div>
+      <Header>Check Page</Header>
       <Segment.Group>
         <Segment>
           <Message as="h3">Decryption Time : {time}</Message>

@@ -1,12 +1,17 @@
 import React from 'react';
 import Voter from '../components/Voter';
+import styled from '@emotion/styled';
 
 const VoterPage = () => {
   return (
-    <div>
+    <Container>
       <Voter />
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  margin: 50;
+`;
 
 export default VoterPage;

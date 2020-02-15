@@ -24,7 +24,8 @@ const Voter: FC = () => {
     async (vote, rP) => {
       try {
         await contract.currentContract.methods.setVote(vote, rP).send({
-          from: account
+          from: account,
+          gas: 300000 // change gas
         });
         showVote(vote);
       } catch (err) {
@@ -47,7 +48,7 @@ const Voter: FC = () => {
 
   useEffect(() => {
     setInitialAccount();
-  }, [setInitialAccount, setVote]);
+  }, [setInitialAccount]);
 
   const toResultPage = () => {
     history.push('/result');
@@ -57,27 +58,27 @@ const Voter: FC = () => {
   };
 
   return (
-    <div className="container">
+    <div>
       <Header>
-        Voter Page <GetVotingEndSign />{' '}
-      </Header>{' '}
+        Voter Page <GetVotingEndSign />
+      </Header>
       <Segment.Group>
-        <Segment className="item">
+        <Segment>
           <AddressViewer address={account} role="Your" />
         </Segment>
-        <Segment className="item">
-          <VoteForm address={account} setVote={setVote} error={error} />{' '}
+        <Segment>
+          <VoteForm address={account} setVote={setVote} error={error} />
         </Segment>
         <Segment>
-          <p>Your Encrypted Vote（ IPFS hash）: {vote} </p>{' '}
+          <p>Your Encrypted Vote（ IPFS hash）: {vote} </p>
         </Segment>
         <Segment>
-          <Button onClick={toResultPage}> Go to Result Page </Button>{' '}
-        </Segment>{' '}
+          <Button onClick={toResultPage}> Go to Result Page </Button>
+        </Segment>
         <Segment>
-          <Button onClick={toDecryptPage}> Go to Decrypt Page </Button>{' '}
-        </Segment>{' '}
-      </Segment.Group>{' '}
+          <Button onClick={toDecryptPage}> Go to Decrypt Page </Button>
+        </Segment>
+      </Segment.Group>
     </div>
   );
 };
