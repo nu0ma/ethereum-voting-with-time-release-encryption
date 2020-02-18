@@ -1,3 +1,7 @@
+<h1 align="center">Ethereum E-Voting using Time Release Encryption
+</h2>
+
+# preview
 ![ev-tre-voting](https://user-images.githubusercontent.com/29624403/74125022-8fdff780-4c17-11ea-83b7-15985e1f072f.gif)
 
 
